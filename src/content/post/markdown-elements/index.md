@@ -1,174 +1,88 @@
 ---
-title: "A post of Markdown elements"
-description: "This post is for testing and listing a number of different markdown elements"
+title: "Markdown 元素示例"
+description: "这篇文章用于测试和展示常见 Markdown 元素。"
 publishDate: "22 Feb 2023"
 updatedDate: 22 Jan 2024
-tags: ["test", "markdown"]
+tags: ["测试", "markdown"]
 pinned: true
 ---
 
-## This is a H2 Heading
+## 二级标题
 
-### This is a H3 Heading
+### 三级标题
 
-#### This is a H4 Heading
+#### 四级标题
 
-##### This is a H5 Heading
+##### 五级标题
 
-###### This is a H6 Heading
+###### 六级标题
 
-## Horizontal Rules
-
----
+## 分割线
 
 ---
 
----
+## 强调
 
-## Emphasis
+**这是粗体**
 
-**This is bold text**
+_这是斜体_
 
-_This is italic text_
+~~这是删除线~~
 
-~~Strikethrough~~
+## 引用
 
-## Quotes
-
-"Double quotes" and 'single quotes'
-
-## Blockquotes
-
-> Blockquotes can also be nested...
+> 这是一段引用。
 >
-> > ...by using additional greater-than signs right next to each other...
+> > 引用也可以嵌套。
 
-## References
+## 脚注
 
-An example containing a clickable reference[^1] with a link to the source.
+这里有一个脚注引用[^1]。
 
-Second example containing a reference[^2] with a link to the source.
+[^1]: 这是脚注内容。
 
-[^1]: Reference first footnote with a return to content link.
+## 列表
 
-[^2]: Second reference with a link.
+无序列表：
 
-If you check out this example in `src/content/post/markdown-elements/index.md`, you'll notice that the references and the heading "Footnotes" are added to the bottom of the page via the [remark-rehype](https://github.com/remarkjs/remark-rehype#options) plugin.
+- 第一项
+- 第二项
+  - 子项目
+- 第三项
 
-## Lists
+有序列表：
 
-Unordered
+1. 第一步
+2. 第二步
+3. 第三步
 
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    - Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
+## 代码
 
-Ordered
+行内代码：`const site = "my-site"`
 
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
+代码块：
 
-4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-```js
-var foo = function (bar) {
-	return bar++;
-};
-
-console.log(foo(5));
-```
-
-### Expressive code examples
-
-Adding a title
-
-```js title="file.js"
-console.log("Title example");
-```
-
-A bash terminal
-
-```bash
-echo "A base terminal example"
-```
-
-Highlighting code lines
-
-```js title="line-markers.js" del={2} ins={3-4} {6}
-function demo() {
-	console.log("this line is marked as deleted");
-	// This line and the next one are marked as inserted
-	console.log("this is the second inserted line");
-
-	return "this line uses the neutral default marker type";
+```js title="demo.js"
+function add(a, b) {
+	return a + b;
 }
+
+console.log(add(2, 3));
 ```
 
-[Expressive Code](https://expressive-code.com/) can do a ton more than shown here, and includes a lot of [customisation](https://expressive-code.com/reference/configuration/).
+## 表格
 
-## Tables
+| 项目 | 说明 |
+| --- | --- |
+| posts | 文章内容 |
+| tags | 标签页面 |
 
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+## 图片
 
-### Table Alignment
+同目录图片：`src/content/post/markdown-elements/logo.png`
 
-| Item         | Price | # In stock |
-| ------------ | :---: | ---------: |
-| Juicy Apples | 1.99  |        739 |
-| Bananas      | 1.89  |          6 |
+![Astro Cactus 标志](./logo.png)
 
-### Keyboard elements
+## 链接
 
-| Action                | Shortcut                                   |
-| --------------------- | ------------------------------------------ |
-| Vertical split        | <kbd>Alt+Shift++</kbd>                     |
-| Horizontal split      | <kbd>Alt+Shift+-</kbd>                     |
-| Auto split            | <kbd>Alt+Shift+d</kbd>                     |
-| Switch between splits | <kbd>Alt</kbd> + arrow keys                |
-| Resizing a split      | <kbd>Alt+Shift</kbd> + arrow keys          |
-| Close a split         | <kbd>Ctrl+Shift+W</kbd>                    |
-| Maximize a pane       | <kbd>Ctrl+Shift+P</kbd> + Toggle pane zoom |
-
-## Images
-
-Image in the same folder: `src/content/post/markdown-elements/logo.png`
-
-![Astro theme cactus logo](./logo.png)
-
-## Links
-
-[Content from markdown-it](https://markdown-it.github.io/)
+[Astro 文档](https://docs.astro.build/)
